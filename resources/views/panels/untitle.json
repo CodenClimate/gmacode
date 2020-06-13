@@ -1,0 +1,645 @@
+{
+    "pages": [
+        {
+            "name": "page1",
+            "title": "Graduates’ Journey",
+            "elements": [
+                {
+                    "name": "1",
+                    "type": "radiogroup",
+                    "title": { "bg": "Endelea?", "default": "Proceed?" },
+                    "choices": [
+                        {
+                            "text": { "bg": "NDIO", "default": "Yes" },
+                            "value": "1"
+                        },
+                        {
+                            "text": { "bg": "LA", "default": "No" },
+                            "value": "2"
+                        }
+                    ]
+                },
+                {
+                    "name": "3",
+                    "type": "radiogroup",
+                    "title": "3. Did you graduate from Generation ?",
+                    "choices": [
+                        { "text": "Yes I graduated", "value": "1" },
+                        { "text": "No I did not graduate", "value": "2" },
+                        {
+                            "text": "Did not complete or graduate",
+                            "value": "3"
+                        },
+                        {
+                            "text": "I have never been a Generation student",
+                            "value": "4"
+                        }
+                    ],
+                    "visibleIf": "{1} = \"1\"",
+                    "isRequired": true
+                },
+                {
+                    "name": "4",
+                    "type": "radiogroup",
+                    "title": {
+                        "bg": "4. Ni nini ilifanyika  baada ya kugraduate/kuhitimu?",
+                        "default": "4.What happened once you graduated?"
+                    },
+                    "choices": [
+                        {
+                            "text": {
+                                "bg": "Nilipata kazi ya kulipwa baada ya kugraduate/ kuhitimu",
+                                "default": "Got a paying job after graduating"
+                            },
+                            "value": "1"
+                        },
+                        {
+                            "text": {
+                                "bg": "Niliendelea na kazi niliyokuwa nayo/ ambayo nilipata kabla ya kugraduate/ kuhitimu",
+                                "default": "Continued with a job I already had/ that I got before graduation"
+                            },
+                            "value": "2"
+                        },
+                        {
+                            "text": {
+                                "bg": "Nilianzisha biashara ya kujiajiri mwenyewe, kazi zangu",
+                                "default": "Started a business went to self-employment, own hustles"
+                            },
+                            "value": "3"
+                        },
+                        {
+                            "text": {
+                                "bg": "Sikupata kazi nilikaa nyumbani/ sina kazi",
+                                "default": "Did not get a job and stayed at home/unemployed"
+                            },
+                            "value": "4"
+                        },
+                        {
+                            "text": {
+                                "bg": "Niliendelea na masomo zaidi/ course zingine",
+                                "default": "Went for further schooling/other courses"
+                            },
+                            "value": "5"
+                        }
+                    ],
+                    "hasOther": true,
+                    "visibleIf": "{1} = \"1\"",
+                    "isRequired": true
+                },
+                {
+                    "name": "5",
+                    "type": "radiogroup",
+                    "title": {
+                        "bg": "5. Ningependa kuhakikisha kama umewahi kuwa na kazi ya kulipwa( kuajiriwa) tangu ulipotoka Generation?",
+                        "default": "5. Just to confirm have you ever had a paying job (employed) since you left Generation?"
+                    },
+                    "choices": [
+                        {
+                            "text": { "bg": "NDIO", "default": "Yes" },
+                            "value": "1"
+                        },
+                        {
+                            "text": { "bg": "LA", "default": "No" },
+                            "value": "2"
+                        }
+                    ],
+                    "visibleIf": "{4} anyof [\"4\",\"5\",\"other\"]",
+                    "isRequired": true
+                }
+            ],
+            "description": {
+                "bg": "Habari ya leo. Jina langu ni ……………..kutoka Gmaurich, kampuni ya utafiti. Tulipata number yako ya simu kutoka Generation na tungependa kukuuliza maswali machache kutusaidia kuelewa maisha yako tangu utoke Generation.  Majibu yako yatawekwa pamoja na majibu ya watu wengine wengi na kwa hivyo hakuna mtu atajua jibu lako lilikuwa lipi. Habari utakazo tuambia zitalindwa na kuekwa kwa siri. Kuwa huru na uniambie kama kuna swali ambalo huelewi. Maongezi yetu yata recodiwa kwa kudhibitisha ubora wa kazi. Mazungumzo yetu yatachukuwa takriban ya dakika 10. Je tunaeza endelea na mahojiano?",
+                "default": "CONSENT TO PARTICIPATE \nGood morning / afternoon / evening. My name is ____________ from Gmaurich, an independent market research.  We got your contacts from Generation and we wish to ask you a few questions to understand your life since you graduated from Generation.  Answers to these questions will be combined with answers from many people so that no one will know what answers are given by which respondent. Your privacy is protected and I assure you that your answers are confidential.  Please feel free to let me know if there is a question you do not understand. This interview is being recorded for quality control purposes. The study will take approximately 10 minutes to complete. Can we continue with the interview?"
+            }
+        },
+        {
+            "name": "page2",
+            "elements": [
+                {
+                    "name": "6",
+                    "type": "text",
+                    "title": {
+                        "bg": "6. Ulipata kazi ya kwanza/ ulianzisha biashara baada ya miezi mingapi baada ya kugraduate/ kuhitimu",
+                        "default": "6.How many months after graduation/completion  did you get that first job / start a business?"
+                    },
+                    "inputType": "number",
+                    "visibleIf": "{4} anyof [\"1\",\"2\",\"3\"] or {5} = \"1\"",
+                    "description": "IF IMMEDIATE OR BEFORE TRAINING RECORD ZERO (0)"
+                },
+                {
+                    "name": "7",
+                    "type": "radiogroup",
+                    "title": {
+                        "bg": "Ukifikiria  ile kazi ya kwanza ya kulipwa au biashara/ kujiajiri, je ilikuwa kwa ile sector/area uliyosomea Generation?",
+                        "default": "7.Thinking about that first paying job or the business/self-employment was it in the same sector/area as what you had studied in Generation?"
+                    },
+                    "choices": [
+                        {
+                            "text": { "bg": "NDIO", "default": "YES" },
+                            "value": "1"
+                        },
+                        {
+                            "text": { "bg": "LA", "default": "NO" },
+                            "value": "2"
+                        }
+                    ],
+                    "visibleIf": "{4} anyof [\"1\",\"2\"] or {5} = \"1\""
+                },
+                {
+                    "name": "8",
+                    "type": "text",
+                    "title": {
+                        "bg": "8. Mwajiri wako aliyekupa kazi ya kwanza alikua anaitwa nani?",
+                        "default": "8. What was the name of employer (where you got the first job)?"
+                    },
+                    "visibleIf": "{4} anyof [\"1\",\"2\"] or {5} = \"1\"",
+                    "isRequired": true
+                },
+                {
+                    "name": "9",
+                    "type": "radiogroup",
+                    "title": {
+                        "bg": "9. Na ulipataje hio kazi ya kwanza? Je ilikua",
+                        "default": "9.And how did you get that first job was it"
+                    },
+                    "choices": [
+                        {
+                            "text": {
+                                "bg": "Generation/ mwalimu alinitafutia hio kazi / waajiri walikuja Generation",
+                                "default": "Generation /instructor found me the job/"
+                            },
+                            "value": "1"
+                        },
+                        {
+                            "text": {
+                                "bg": "Rafiki/ mtu wa familia alinitafutia hio kazi",
+                                "default": "Friend/family found me the job/"
+                            },
+                            "value": "2"
+                        },
+                        {
+                            "text": {
+                                "bg": "Nilijitafutia hio kazi mwenyewe",
+                                "default": "I found the job myself"
+                            },
+                            "value": "3"
+                        }
+                    ],
+                    "hasOther": true,
+                    "visibleIf": "{4} anyof [\"1\",\"2\"] or {5} = \"1\"",
+                    "isRequired": true
+                },
+                {
+                    "name": "10",
+                    "type": "radiogroup",
+                    "title": {
+                        "bg": "10. Na je,huyo rafiki/ mtu wa familia alikua",
+                        "default": "10.And was the friend/family a"
+                    },
+                    "choices": [
+                        {
+                            "text": {
+                                "bg": "Amehitimu [amegraduate]/ mwanafunzi wa Generation",
+                                "default": "A generation graduate/student"
+                            },
+                            "value": "1"
+                        },
+                        {
+                            "text": { "bg": "Mwingine", "default": "Other" },
+                            "value": "2"
+                        }
+                    ],
+                    "visibleIf": "{9} = \"2\"",
+                    "isRequired": true
+                }
+            ]
+        },
+        {
+            "name": "page3",
+            "elements": [
+                {
+                    "name": "11",
+                    "type": "dropdown",
+                    "title": {
+                        "bg": "Mshahara wako kwa mwezi ulikua pesa ngapi kwa hio kazi yako ya kwanza/ mapato yako kwa mwezi kwa hio biashara/kujiajiri ilikua pesa ngapi baada ya Generation?",
+                        "default": "11.\tHow much were you paid in that first job per month after Generation   / How much did you earn in a month your business/self-employment after generation?/"
+                    },
+                    "choices": [
+                        { "text": "No income", "value": "0" },
+                        { "text": "Below Kes 5,000", "value": "1" },
+                        { "text": "Kes 5,001- 10,000", "value": "2" },
+                        { "text": "Kes. 10,001 – 20,000", "value": "3" },
+                        { "text": "Kes. 20,001 – 30,000", "value": "4" },
+                        { "text": "Kes.30,001 – 40,000", "value": "5" },
+                        { "text": "Kes.40,001 – 50,000", "value": "6" },
+                        { "text": "Kes.50,001 – 70,000", "value": "7" },
+                        { "text": "Kes.70,001 – 90,000", "value": "8" },
+                        { "text": "Kes.90,001 – 110,000", "value": "9" },
+                        { "text": "Kes.110,001 – 130,000", "value": "10" },
+                        { "text": "Over Kes 130,000", "value": "11" },
+                        { "text": "No Response", "value": "-98" }
+                    ],
+                    "visibleIf": "{4} anyof [\"1\",\"2\",\"3\"]  or {5} = \"1\"",
+                    "isRequired": true
+                },
+                {
+                    "name": "11b1",
+                    "type": "dropdown",
+                    "title": {
+                        "bg": "Na ulikua unapata pesa ngapi kwa mwezi kabla ya kupata mafundisho ya Generation",
+                        "default": "11b And how much per month were you earning before you went for Generation training?"
+                    },
+                    "choices": [
+                        { "text": "No income", "value": "0" },
+                        { "text": "Below Kes 5,000", "value": "1" },
+                        { "text": "Kes 5,001- 10,000", "value": "2" },
+                        { "text": "Kes. 10,001 – 20,000", "value": "3" },
+                        { "text": "Kes. 20,001 – 30,000", "value": "4" },
+                        { "text": "Kes.30,001 – 40,000", "value": "5" },
+                        { "text": "Kes.40,001 – 50,000", "value": "6" },
+                        { "text": "Kes.50,001 – 70,000", "value": "7" },
+                        { "text": "Kes.70,001 – 90,000", "value": "8" },
+                        { "text": "Kes.90,001 – 110,000", "value": "9" },
+                        { "text": "Kes.110,001 – 130,000", "value": "10" },
+                        { "text": "Over Kes 130,000", "value": "11" },
+                        { "text": "No Response", "value": "-98" }
+                    ],
+                    "visibleIf": "{4} anyof [\"1\",\"2\",\"3\"] or {5} = \"1\"",
+                    "isRequired": true
+                },
+                {
+                    "name": "12",
+                    "type": "text",
+                    "title": {
+                        "bg": "12. Ulifanya kazi au biashara yako ya kwanza kwa muda gani baada ya mafunzo yako generation?",
+                        "default": "12.How long did you stay in that first job or that first business after generation training?"
+                    },
+                    "inputType": "number",
+                    "visibleIf": "{4} anyof [\"1\",\"2\",\"3\"] or {5} = \"1\" and {12_2} <> [\"1\"]"
+                },
+                {
+                    "name": "12_2",
+                    "type": "checkbox",
+                    "title": "Still in the same job",
+                    "choices": [{ "text": "Yes", "value": "1" }],
+                    "visibleIf": "{12} empty",
+                    "isRequired": true
+                },
+                {
+                    "name": "12b.",
+                    "type": "radiogroup",
+                    "title": {
+                        "bg": "12b. Mbona uliacha?",
+                        "default": "12b. And why did you leave?"
+                    },
+                    "choices": [
+                        { "text": "Got a better job", "value": "1" },
+                        { "text": "Business closed", "value": "2" },
+                        {
+                            "text": "Business cut back/had no work",
+                            "value": "3"
+                        },
+                        {
+                            "text": "Asked to leave for other reasons (not meeting target, sacked)",
+                            "value": "4"
+                        },
+                        {
+                            "text": "Left for personal/family/health issues",
+                            "value": "5"
+                        }
+                    ],
+                    "hasOther": true,
+                    "visibleIf": "{4} anyof [\"1\",\"2\",\"3\"] or {5} = \"1\""
+                },
+                {
+                    "name": "13",
+                    "type": "text",
+                    "title": {
+                        "bg": "13. Ilikuchukuwa muda gani kupata kazi nyingine baada ya kuwacha/kupoteza kazi ile ya kwanza",
+                        "default": "13. How long did it take you to get another job after you left/lost that first job?"
+                    },
+                    "inputType": "number",
+                    "visibleIf": "{12b.} <> \"1\""
+                },
+                {
+                    "name": "13_2",
+                    "type": "checkbox",
+                    "title": {
+                        "bg": "Bado watafuta?",
+                        "default": "Still Looking?"
+                    },
+                    "choices": [
+                        {
+                            "text": { "bg": "NDIO", "default": "Yes" },
+                            "value": "1"
+                        }
+                    ],
+                    "visibleIf": "{13} empty and {12b.} <> \"1\"",
+                    "isRequired": true
+                }
+            ]
+        },
+        {
+            "name": "page4",
+            "title": "PROGRESSION & CURRENTLY",
+            "elements": [
+                {
+                    "name": "14",
+                    "type": "text",
+                    "title": {
+                        "bg": "14. none  Ukihesabu kazi yako ya kwanza pamoja na ile unayo saizi, umekuwa na kazi ngapi za malipo kwa jumla hadi ulipo maliza generation ? Kazi kwa kampuni tofauti.",
+                        "default": "14.\tIncluding your first job and the one you have now how many paying jobs have you had in total since generation ?  Jobs in different companies record  (zero) if none"
+                    },
+                    "inputType": "number",
+                    "isRequired": true
+                },
+                {
+                    "name": "14b",
+                    "type": "text",
+                    "title": {
+                        "bg": "14b. Ni kazi ngapi kati ya hizo unaeza sema ulitafutiwa na Generation?",
+                        "default": "14b. How many of them would you say were found for you by Generation?"
+                    },
+                    "inputType": "number",
+                    "isRequired": true,
+                    "validators": [
+                        {
+                            "text": "Number Cannot be greater than in 14",
+                            "type": "expression",
+                            "expression": "{14b} <= {14}"
+                        }
+                    ]
+                },
+                {
+                    "name": "15",
+                    "type": "checkbox",
+                    "title": {
+                        "bg": "15 .Kwa sasa ni gani kati ya yafwatayo yanaeleza hali yako?",
+                        "default": "15.And currently which of these describes your position?"
+                    },
+                    "choices": [
+                        {
+                            "text": {
+                                "bg": "Nimeajiriwa kazi idara sawa na mafunzo yangu ya Generation",
+                                "default": "Employed in a job in the same sector/area as my course in Generation/"
+                            },
+                            "value": "1",
+                            "visibleIf": "{5} = \"1\""
+                        },
+                        {
+                            "text": {
+                                "bg": "Nimeajiriwa kazi lakini siyo idara sawa na mafunzo yangu ya Generation",
+                                "default": "Employed in a job but not in the same sector/area as my course in Generation"
+                            },
+                            "value": "2",
+                            "visibleIf": "{5} = \"1\""
+                        },
+                        {
+                            "text": {
+                                "bg": "Nafanya biashara yangu mwenyewe/Nimejiajiri/nafanya shugli zangu",
+                                "default": "Running my own business /self-employment, own hustles/"
+                            },
+                            "value": "3"
+                        },
+                        {
+                            "text": {
+                                "bg": "Niko nyumbani/ sina kazi",
+                                "default": "At home/unemployed"
+                            },
+                            "value": "4"
+                        },
+                        {
+                            "text": {
+                                "bg": "Niko shuleni",
+                                "default": "Currently in school"
+                            },
+                            "value": "5"
+                        }
+                    ],
+                    "isRequired": true,
+                    "description": "ASK ALL"
+                },
+                {
+                    "name": "16",
+                    "type": "dropdown",
+                    "title": {
+                        "bg": "16. Unapata mshahara [pesa kutoka kwa biashara] wa kiasi gani kwa mwezi? [kabla ya ushuru]",
+                        "default": "16. How much salary (/income from business) do you currently get in a month? (before tax)"
+                    },
+                    "choices": [
+                        { "text": "No income", "value": "0" },
+                        { "text": "Below Kes 5,000", "value": "1" },
+                        { "text": "Kes 5,001- 10,000", "value": "2" },
+                        { "text": "Kes. 10,001 – 20,000", "value": "3" },
+                        { "text": "Kes. 20,001 – 30,000", "value": "4" },
+                        { "text": "Kes.30,001 – 40,000", "value": "5" },
+                        { "text": "Kes.40,001 – 50,000", "value": "6" },
+                        { "text": "Kes.50,001 – 70,000", "value": "7" },
+                        { "text": "Kes.70,001 – 90,000", "value": "8" },
+                        { "text": "Kes.90,001 – 110,000", "value": "9" },
+                        { "text": "Kes.110,001 – 130,000", "value": "10" },
+                        { "text": "Over Kes 130,000", "value": "11" },
+                        { "text": "No Response", "value": "-98" }
+                    ],
+                    "isRequired": true,
+                    "description": { "bg": "ULIZA ZOTE", "default": "ASK ALL" }
+                },
+                {
+                    "name": "17",
+                    "rows": [
+                        {
+                            "text": {
+                                "bg": "Nimepandishwa cheo miaka inapoendelea",
+                                "default": "I have been promoted over the years/"
+                            },
+                            "value": "1"
+                        },
+                        {
+                            "text": {
+                                "bg": "Majukumu yangu kazini yameongezeka",
+                                "default": "My responsibilities at work have grown"
+                            },
+                            "value": "2"
+                        },
+                        {
+                            "text": {
+                                "bg": "Ujuuzi wangu umezidi kuongezeka miaka inapoendelea",
+                                "default": "My skills have grown over the years/"
+                            },
+                            "value": "3"
+                        }
+                    ],
+                    "type": "matrix",
+                    "title": {
+                        "bg": "17. Nitakusomea sentensi kadha, Tafadhali nijulishe kama unakubaliana nazo ama la. Tangu kufuzu/kugraduate",
+                        "default": "17. I will read to you some statements, let me know if it is a Yes or No. Since you graduated"
+                    },
+                    "columns": [
+                        { "text": "Yes", "value": "1" },
+                        { "text": "No", "value": "2" }
+                    ],
+                    "isRequired": true
+                }
+            ]
+        },
+        {
+            "name": "page5",
+            "elements": [
+                {
+                    "name": "18",
+                    "type": "checkbox",
+                    "title": {
+                        "bg": "19. Nitajie mambo mawili makubwa ambayo umeweza kukamilisha/kufanya tangu umalize mafunzo ya Generation?",
+                        "default": "18.\tWhat are the 2 top developmental things you have accomplished since you completed Generation training?"
+                    },
+                    "choices": [
+                        {
+                            "text": "Built a house for self/family",
+                            "value": "1"
+                        },
+                        {
+                            "text": "Paid school fees for own children or siblings",
+                            "value": "2"
+                        },
+                        { "text": "Bought land/plot", "value": "3" },
+                        {
+                            "text": "Bought business assets machines, motorbike etc",
+                            "value": "4"
+                        },
+                        { "text": "Started a business", "value": "5" },
+                        {
+                            "text": "Bought livestock (chicken, cows, goat, sheep, pigs, etc)",
+                            "value": "6"
+                        },
+                        {
+                            "text": "I have put aside some savings",
+                            "value": "7"
+                        }
+                    ],
+                    "hasNone": true,
+                    "hasOther": true,
+                    "noneText": {
+                        "bg": "Hakuna/sijaweza kufanya kitu chochote kikubwa.",
+                        "default": "Nothing /haven’t achieved anything substantial"
+                    },
+                    "isRequired": true,
+                    "validators": [
+                        {
+                            "text": "Not More than 2",
+                            "type": "expression",
+                            "expression": "{18.length} < 3"
+                        }
+                    ]
+                },
+                {
+                    "name": "19",
+                    "type": "checkbox",
+                    "title": {
+                        "bg": "20. Tukiangalia hali iliopo leo ya COVID-19, gani kati ya hizi inaeleza hali yako",
+                        "default": "19. Given the situation today with COVID-19, which one of these best describes you position"
+                    },
+                    "choices": [
+                        {
+                            "text": "I am working as usual from my usual place of work /running my usual businesses at usual premises",
+                            "value": "1"
+                        },
+                        {
+                            "text": "I have my usual job/business but am working at home",
+                            "value": "2"
+                        },
+                        {
+                            "text": "I am at home but not working (still has his job though)/",
+                            "value": "3"
+                        },
+                        {
+                            "text": "I have a different job/business",
+                            "value": "4"
+                        },
+                        { "text": "I lost my job/no job", "value": "5" },
+                        {
+                            "text": "Nothing has changed I don’t have a job",
+                            "value": "6"
+                        }
+                    ],
+                    "hasOther": true,
+                    "isRequired": true,
+                    "description": { "bg": "ULIZA ZOTE", "default": "ASK ALL" }
+                },
+                {
+                    "name": "20",
+                    "type": "radiogroup",
+                    "title": {
+                        "bg": "21 .Na ukifikiria kuhusu mapato yako wakati huu wa COVID-19, Gani kati ya hizi inaweza fanyika?",
+                        "default": "20.\tAnd thinking about your income with the COVID-19, which of these is likely to happen?"
+                    },
+                    "choices": [
+                        {
+                            "text": {
+                                "bg": "Mapato yataongezeka",
+                                "default": "Income will increase"
+                            },
+                            "value": "1"
+                        },
+                        {
+                            "text": {
+                                "bg": "Hakuna mabadiliko kwa mapato",
+                                "default": "No change in income"
+                            },
+                            "value": "2"
+                        },
+                        {
+                            "text": {
+                                "bg": "Mapato yatapungua",
+                                "default": "Drop in income"
+                            },
+                            "value": "3"
+                        }
+                    ],
+                    "isRequired": true
+                }
+            ]
+        },
+        {
+            "name": "page6",
+            "title": "DEMOS",
+            "elements": [
+                {
+                    "name": "21",
+                    "type": "radiogroup",
+                    "title": "21.Gender",
+                    "choices": [
+                        { "text": "Male", "value": "1" },
+                        { "text": "Female", "value": "2" }
+                    ],
+                    "isRequired": true
+                },
+                {
+                    "name": "22",
+                    "type": "text",
+                    "title": "22. Age",
+                    "inputType": "number",
+                    "isRequired": true
+                },
+                {
+                    "name": "23",
+                    "type": "text",
+                    "title": {
+                        "bg": "Ni watu wangapi wanakutegemea?",
+                        "default": "23.How many people depend on you?/"
+                    },
+                    "inputType": "number",
+                    "isRequired": true
+                }
+            ]
+        }
+    ],
+    "title": "Catch Up",
+    "triggers": [
+        { "type": "complete", "expression": "{1} = \"2\"" },
+        { "type": "skip", "gotoName": "14", "expression": "{5} = \"2\"" }
+    ],
+    "showTimerPanel": "top",
+    "showProgressBar": "bottom",
+    "showQuestionNumbers": "off",
+    "sendResultOnPageNext": true
+}
